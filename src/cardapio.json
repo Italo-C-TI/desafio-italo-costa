@@ -1,0 +1,52 @@
+{
+    "cardapio":{
+        "principais": [
+              {
+                "nome":"Café",
+                "codigo":"cafe",
+                "descricao": "Café" ,
+                "valor": 3,
+                "extras": [{
+                    "nome":"Chantily",
+                    "codigo":"chantily",
+                    "valor": 1.50
+                }]
+            },
+            {
+                "nome":"Suco Natural",
+                "codigo":"suco",
+                "valor": 6.20,
+                "extras": []
+            },
+            {
+                "nome":"Sanduíche",
+                "codigo":"sanduiche",
+                "valor": 6.50,
+                "extras": [{
+                    "nome":"Queijo",
+                    "codigo":"queijo",
+                    "valor": 2
+                }]
+            },
+            {
+                "nome":"Salgado",
+                "codigo":"salgado",
+                "valor": 7.25,
+                "extras": []
+            }
+            
+        ],
+        "combos": [
+            {
+                "nome":"1 Suco e 1 Sanduíche",
+                "codigo":"combo1",
+                "valor": 9.50
+            },
+            {
+                "nome":"1 Café e 1 Sanduíche",
+                "codigo":"combo2",
+                "valor": 7.50
+            }
+        ]
+    }
+  }
