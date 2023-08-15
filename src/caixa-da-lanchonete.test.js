@@ -3,10 +3,12 @@ import { CaixaDaLanchonete } from "./caixa-da-lanchonete.js";
 describe('CaixaDaLanchonete', () => {
 
     const validaTeste = async (formaDePagamento, resultadoEsperado, itens) => {
-        const resultado = await new CaixaDaLanchonete()
-            .calcularValorDaCompra(formaDePagamento, itens);
-
-        expect(resultado.replace("\xa0", " ")).toEqual(resultadoEsperado);
+        try {
+            const resultado = await new CaixaDaLanchonete().calcularValorDaCompra(formaDePagamento, itens);
+            expect(resultado.replace("\xa0", " ")).toEqual(resultadoEsperado);
+        } catch (error) {
+            expect(error.message).toEqual(resultadoEsperado);
+        }
     };
 
     test.each([

@@ -1,6 +1,6 @@
 export class InvalidItemError extends Error{
     constructor(message) {
-        super(message || "item inválido!");
+        super(message || "Item inválido!");
         this.status = 400;
     }
 }
