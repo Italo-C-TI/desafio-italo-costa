@@ -2,8 +2,8 @@ import { CaixaDaLanchonete } from "./caixa-da-lanchonete.js";
 
 describe('CaixaDaLanchonete', () => {
 
-    const validaTeste = (formaDePagamento, resultadoEsperado, itens) => {
-        const resultado = new CaixaDaLanchonete()
+    const validaTeste = async (formaDePagamento, resultadoEsperado, itens) => {
+        const resultado = await new CaixaDaLanchonete()
             .calcularValorDaCompra(formaDePagamento, itens);
 
         expect(resultado.replace("\xa0", " ")).toEqual(resultadoEsperado);
@@ -13,8 +13,8 @@ describe('CaixaDaLanchonete', () => {
         ['com carrinho vazio', 'dinheiro', 'Não há itens no carrinho de compra!', []],
         ['com carrinho vazio', 'credito', 'Não há itens no carrinho de compra!', []],
         ['com carrinho vazio', 'debito', 'Não há itens no carrinho de compra!', []],
-    ])('compra %p em %p deve resultar em %p', (_, formaDePagamento, resultadoEsperado, itens) =>
-        validaTeste(formaDePagamento, resultadoEsperado, itens));
+    ])('compra %p em %p deve resultar em %p', async (_, formaDePagamento, resultadoEsperado, itens) =>
+        await validaTeste(formaDePagamento, resultadoEsperado, itens));
 
     test.each([
         ['dinheiro', 'R$ 2,85', ['cafe,1']],

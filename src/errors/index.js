@@ -1,10 +1,10 @@
-import { InvalidItemError } from "./InvalidItemError"
-import { InvalidAmountError } from "./InvalidAmountError"
-import { InvalidExtraItemError } from "./InvalidExtraItemError"
-import { InvalidPaymentMethodError } from "./InvalidPaymentMethodError"
-import { NoItemError } from "./NoItemError"
+import { InvalidItemError } from "./InvalidItemError.js"
+import { InvalidAmountError } from "./InvalidAmountError.js"
+import { InvalidExtraItemError } from "./InvalidExtraItemError.js"
+import { InvalidPaymentMethodError } from "./InvalidPaymentMethodError.js"
+import { NoItemError } from "./NoItemError.js"
 
-export {
+export  {
     InvalidItemError,
     InvalidAmountError,
     InvalidExtraItemError,
